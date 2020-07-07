@@ -22,8 +22,8 @@ print("E:", string[-1]) # -1 always the last element
 #print(string[len(string)])  # INDEX ERROR - index out of range; len returns 4
 
 #            0           1            2              3
-names = ("Leonardo", "Raphael", "Michelangelo", "Donatello")
-colors = ("blue",    "red",     "orange",       "purple")
+NAMES = ("Leonardo", "Raphael", "Michelangelo", "Donatello") # all caps variables (CONSTANTS) never change
+COLORS = ("blue",    "red",     "orange",       "purple")
 
 # CHALLENGE: print "Leonardo is the color blue" using indexing
 print(names[0] + " is the color " + colors[0])
