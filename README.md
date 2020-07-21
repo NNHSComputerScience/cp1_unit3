@@ -1,5 +1,5 @@
 
-Unit 2: For Loops and Sequences
+Unit 3: For Loops and Sequences
 ===============================
 
 *Standard 3 - Use iteration structures to build logical programs*
