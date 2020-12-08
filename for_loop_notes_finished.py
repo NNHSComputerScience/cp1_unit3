@@ -8,12 +8,11 @@ while counter < 10:
     print('Hello, world.')
     counter += 1
 
-# FOR LOOP - repeats loop body FOR a certain number of times,
-#            instead of based on a loop condition.
+# FOR LOOP - Iterates through a sequence, and executes the loop body for each element in the sequence.
 
-# pseudocode:
-# for [loop variable] in [sequence]:                # for statement
-#   repeat statements for each item in sequence     # loop body
+# for loop pseudocode:
+# for [loop variable] in [sequence]:                # for statement begins with the 'for' keyword
+#   repeat statements for each item in sequence     # loop body 
  
 # Print "Hello, world." 10 times using a for loop
 input('\nPress enter to begin.')
@@ -30,15 +29,19 @@ for num in "0123456789":
 print(num)  # loop variable exist outside loop! (notice the value is 9)
 
 # range() function 
-#   returns an immutable sequence of integers, of type RANGE.
+#   Built-in function that returns an immutable sequence of integers of type RANGE. 
+#     Commonly used for looping a specific number of times with a for loop.
 #   IMMUTABLE - cannot be changed once created.
-#   can accept 3 arguments: [start](optional), end(exclusive), [step](optional)
-#   commonly used for looping a specific number of times with a for loop
+#   Accepts 3 arguments: range( [start](optional), end(exclusive), [step](optional) )
 
-range_of_nums = range(5) 
-range_of_nums = range(1,6) 
-range_of_nums = range(1,6,2) 
-print("Printed range:", range_of_nums)
+range_of_nums = range(5) # end only
+print("Printed range(5):", range_of_nums)
+print("Type of object:", type(range_of_nums))
+print("Listed range(5):", list(range_of_nums))
+range_of_nums = range(1,6) # start and end
+print("Printed range range(1,6):", range_of_nums)
+range_of_nums = range(1,6,2) # start, end, and step
+print("Printed range(1,8,2):", range_of_nums)
 
 #   Display numbers 1-20
 input("\nPress enter to begin.")
