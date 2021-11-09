@@ -1,20 +1,20 @@
 # Intro to for loops notes
 #   counting with the range() function 
 
-# counting with while loops:
-# CHALLENGE: Print 'Hello, world.' 10 times using a while loop
-counter = 0
-while counter < 10:
-    print('Hello, world.')
-    counter += 1
-
 # FOR LOOP - Iterates through a sequence, and executes the loop body for each element in the sequence.  
-#            Initializes the looping variable to the first element in the sequence.  Ends after each item has been accessed.
+#            Ends after each item has been accessed.
 
 # for loop pseudocode:
 # for [loop variable] in [sequence]:                # for statement begins with the 'for' keyword
 #   repeat statements for each item in sequence     # loop body 
- 
+
+# Comparing for loops to while loops:
+# Print 'Hello, world.' 10 times using a while loop
+counter = 0
+while counter < 10:             # while statement
+    print('Hello, world.')      # block runs while counter is less than 10
+    counter += 1
+
 # Print "Hello, world." 10 times using a for loop
 input('\nPress enter to begin.')
 for num in "0123456789":        # for statement
@@ -25,7 +25,8 @@ input("\nPress enter to begin.")
 for num in "0123456789":
     print(int(num) + 1)   # num is the LOOP VARIABLE that accesses each element, one at a time
 
-# Often you will use the loop variable in the loop body, but you don't have to.
+# LOOP VARIABLE - Initialized to the first item in the sequence in the for statement and then accesses each subsequent element.  
+#                   Often you will use the loop variable in the loop body, but you don't have to.
 
 print(num)  # loop variable exist outside loop! (notice the value is 9)
 
@@ -36,13 +37,11 @@ print(num)  # loop variable exist outside loop! (notice the value is 9)
 #   Accepts 3 arguments: range( [start](optional), end(exclusive), [step](optional) )
 
 range_of_nums = range(5) # end only
-print("Printed range(5):", range_of_nums)
-print("Type of object:", type(range_of_nums))
-print("Listed range(5):", list(range_of_nums))
 range_of_nums = range(1,6) # start and end
-print("Printed range range(1,6):", range_of_nums)
 range_of_nums = range(1,6,2) # start, end, and step
-print("Printed range(1,8,2):", range_of_nums)
+print("Printed range object:", range_of_nums)
+print("Type of object:", type(range_of_nums))
+print("Range values generated: ", list(range_of_nums))
 
 #   Display numbers 1-20
 input("\nPress enter to begin.")
