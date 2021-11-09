@@ -8,7 +8,8 @@ while counter < 10:
     print('Hello, world.')
     counter += 1
 
-# FOR LOOP - Iterates through a sequence, and executes the loop body for each element in the sequence.
+# FOR LOOP - Iterates through a sequence, and executes the loop body for each element in the sequence.  
+#            Initializes the looping variable to the first element in the sequence.  Ends after each item has been accessed.
 
 # for loop pseudocode:
 # for [loop variable] in [sequence]:                # for statement begins with the 'for' keyword
@@ -24,7 +25,7 @@ input("\nPress enter to begin.")
 for num in "0123456789":
     print(int(num) + 1)   # num is the LOOP VARIABLE that accesses each element, one at a time
 
-# often you will use the loop variable in the loop body, but you don't have to
+# Often you will use the loop variable in the loop body, but you don't have to.
 
 print(num)  # loop variable exist outside loop! (notice the value is 9)
 
