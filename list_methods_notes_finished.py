@@ -2,6 +2,7 @@
 # METHOD - an ability or behavior that an object has; something it can do.
 #   Like strings and turtles, lists are objects that have their own behavior, 
 #     or list methods.
+import random
 
 row = ["Ford", "Audi", "BMW", "Lexus", "Mercedes", "Jeep"]
 print(row)
@@ -15,8 +16,8 @@ row += ["Ford", "Tesla"] # concatenation is one way to add item(s) to a list, bu
 row.append("Ford")
 print(row)
 
-#append multiple is a trap!
-#row.append("Ford", "Buick")
+# A list can only append one item at a time.
+#row.append("Ford", "Buick") # error
 #print(row) 
 
 car = 1
@@ -65,4 +66,10 @@ print(row.index("Lexus"))
 row.insert(2, "Kia")
 print(row)
 
-input("Press enter to exit.")
+# random.choice(sequence) function
+#   Return a random element from the non-empty sequence seq. If seq is empty, raises IndexError.
+#       e.g.
+rand_car = random.choice(row)
+rand_vowel = random.choice(“AEIOU”)
+
+print("Random car", rand_car, "\nRandom vowel", rand_vowel)
