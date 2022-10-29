@@ -1,40 +1,52 @@
-# Intro to for loops notes
-#   counting with the range() function 
+"""
+Name: 
+Title: Unit 3 Notes: For Loops 
+Description: Overview of using for loops with sequences (strings, ranges, tuples)
 
-# FOR LOOP - Iterates through a sequence, and executes the loop body for each element in the sequence.  
-#            Ends after each item has been accessed.
+FOR LOOP - Our second logical structure for repetition. A for loop iterates through a sequence, and executes the loop body for each element in the sequence. Ends after each item has been accessed. 
 
 # for loop pseudocode:
-# for [loop variable] in [sequence]:                # for statement begins with the 'for' keyword
-#   repeat statements for each item in sequence     # loop body 
+# for [loop variable] in [sequence]:      
+#   repeat statements for each item in sequence
+"""
 
 # Comparing for loops to while loops:
-# Print 'Hello, world.' 10 times using a while loop
-counter = 0
-while counter < 10:             # while statement
-    print('Hello, world.')      # block runs while counter is less than 10
-    counter += 1
+print("Print 0-9 using a while loop:")
+count = 0
+while count < 10:
+	print(count)
+	count += 1
 
-# Print "Hello, world." 10 times using a for loop
-input('\nPress enter to begin.')
-for num in "0123456789":        # for statement
-    print ('Hello, world.')     # block runs 'for each' item in sequence
+print("\nPrint 0-9 using a for loop")
+for count in "0123456789":  # for statement
+    print (count)	 # loop body
  
-# Display numbers 1-10 using a for loop
-input("\nPress enter to begin.")
-for num in "0123456789":
-    print(int(num) + 1)   # num is the LOOP VARIABLE that accesses each element, one at a time
+# LOOP VARIABLE - Initialized to the first element in the sequence in the for statement and then accesses each subsequent element, one after the other.
 
-# LOOP VARIABLE - Initialized to the first item in the sequence in the for statement and then accesses each subsequent element.  
-#                   Often you will use the loop variable in the loop body, but you don't have to.
+print("\nLoop variable:", count)  # loop variable exist outside loop! (notice the value is 9)
 
-print(num)  # loop variable exist outside loop! (notice the value is 9)
+chars = 0
+word = "\nComputer Science"
+for i in word:
+	chars += 1
+# spaces and escape characters count as 1 character
+print(word, "is", chars, "characters long")
 
-# range() function 
-#   Built-in function that returns an immutable sequence of integers of type RANGE. 
-#     Commonly used for looping a specific number of times with a for loop.
-#   IMMUTABLE - cannot be changed once created.
-#   Accepts 3 arguments: range( [start](optional), end(exclusive), [step](optional) )
+# !!! INSTRUCTOR NOTE: peer instruciton #1.1 - 1.3
+
+# SEQUENCE = An ordered list of elements.
+#	e.g. A string is an ordered list of characters. The string "hello" != "olleh".
+
+# ELEMENT = A single item in a sequence.
+#   e.g. the "h" in "hello"
+
+if ("i" not in "team") and ("u" in "fun"):
+	print("\nThese are True!")
+
+# 2 new sequences: RANGE and TUPLE
+	
+# RANGE - Built-in function range() returns an immutable sequence of integers of type RANGE. 
+#   Accepts 3 arguments: range( [start], end(exclusive), [step] )
 
 range_of_nums = range(5) # end only
 range_of_nums = range(1,6) # start and end
@@ -43,91 +55,80 @@ print("Printed range object:", range_of_nums)
 print("Type of object:", type(range_of_nums))
 print("Range values generated: ", list(range_of_nums))
 
-#   Display numbers 1-20
-input("\nPress enter to begin.")
-for num in range(1,21):
-    print (num)   
+print("\nDisplay numbers 1-10:")
+for num in range(1,11):
+    print(num)   
  
-# Controlling range() in more detail
-#   Count 10-20, by 2's
-input("\nPress enter to begin.")
-nums = range(10, 21, 2) # 3rd argument in range() is the step value
+print("\nCount 10-20, by 2's:")
+nums = range(10, 21, 2) 
 for num in nums:
-    print (num)
- 
-# Practice Challenges:
-#   Increment challenge:  Count by 3’s from 3-99, inclusive
-input("\nPress enter to begin.")
-for n in range(3,100,3):
-    print (n)
+    print(num)
 
-#   Counting Down Challenge: Count down by 2’s from 10 to -10, inclusive
-input("\nPress enter to begin.")
-for n in range(10,-11,-2):
-    print (n)
+print("\nCount backwards:")
+for i in range(10,-11,-3):
+    print(i)
+
+# 'i' is used by many programmers as a looping variable (convention originating from mathematics).
+
+# !!! INSTRUCTOR NOTE: peer instruction #2
+
+# TUPLE: a type of immutable sequence, like a string or range, but can contain ANY type of element.
+#   e.g. (0, "a", 2.2, "b", 3, "c")
+
+empty_tuple = ()
+students = ("Jill", "John", "Sarah", "Bob", "Alex")
+scores = (88, 95, 65, 77, 100)
+
+# printing a tuple
+print("\nStudent tuple:", students)
+print("Exam scores tuple:", scores)
+
+print("\nList of students:")
+for stu in students:
+    print(stu)
+
+print("\nList of exam scores:")
+for score in scores:
+	print(score)
+
+# The built-in len() function:
+#   returns the number of elements in a sequence as an integer.
+
+num_stus = len(students)
+print("\nThere are", num_stus, "students in the class.")
+
+# simple search algorithms
+for stu in students:
+	if len(stu) > 4:
+		print(f"\n{stu}'s name is greater than 4 letters long.")
+		
+a = 0
+for score in scores:
+	if score >= 90:
+		a += 1
+print("\nNumber of A's on the exam:", a)
+
+# The tuple() function - converts any sequence to type tuple.
+nums = tuple(range(1,11))
+letters = tuple("abcdefg")
+print("\nPrinted tuples:")
+print(nums)
+print(letters)
+
+# !!! INSTRUCTOR NOTE: peer instruction #3.1 and 3.2
 
 # Application Challenges:
-
-# Bug Collector Program -
-#   A bug collector collects bugs every day for 7 days. Write a program that
-#   keeps a running total of the number of bugs collected during the 7 days.
-#   The loop should ask for the number of bugs collected for each day,
-#   and when the loop is finished, the program should display the total
-#   number of bugs collected. Can you get the day number to display each day?
-print ("\nWelcome bug collector!\n")
-bugs = 0
-total = 0
-for day in range(1,8):
-    bugs = int(input("How many bugs did you collect on day " + str(day) + "?: "))
-    total += bugs
-print ("\nYou collectd a total of", total, "bugs.")
-input("Press enter to exit.")
+"""
+Bug Collector Program -
+   A bug collector collects bugs every day for 7 days. Write a program that keeps a running total of the number of bugs collected during the 7 days. The loop should ask for the number of bugs collected for each day, and when the loop is finished, the program should display the total number of bugs collected. Can you get the day number to display each day?
  
-# Calories Burned Program-
-#   Running on a treadmill you burn 3.9 calories per minute.
-#   Write a program that uses a loop to display the number of
-#   calories burned after 10, 15, 20, 25, and 30 minutes.
-#   Display the number of minutes without hard-coding them.
-print ("\nWelcome runner!\n")
-for mins in range(10,31,5):
-    print ("You will burn ", 3.9 * mins, "calories if you run for", mins, "minutes.")
-
-input("Press enter to exit.")
+Calories Burned Program-
+   Running on a treadmill you burn 3.9 calories per minute. Write a program that uses a loop to display the number of calories burned after 10, 15, 20, 25, and 30 minutes. Display the number of minutes without hard-coding them.
  
-# Advanced Challenge
-# Pennies For Pay Program-
-#   Write a program that calculates the amount of money a person would
-#   earn over a period of time if their salary is one penny the first day,
-#   two pennies the second day, and continues to double each day.
-#   The program should ask the user for the number of days worked.
-#   Display a table showing what the salary was for each day,
-#   and then show the total pay at the end of the period.
+Pennies For Pay Program-
+   Write a program that calculates the amount of money a person would earn over a period of time if their salary is one penny the first day, two pennies the second day, and continues to double each day. The program should ask the user for the number of days worked. Display a table showing what the salary was for each day, and then show the total pay at the end of the period.
 
-days = int(input("How many days did you work?"))
-salary = .01
-total = 0
 
-print("Day\tSalary")
-for day in range(days):
-    print(day + 1, "\t", salary)
-    total += salary
-    salary *= 2 
-    
-print("The total pay at the end of the period is", round(total, 2))
- 
-'''
-print ("\nWelcome to the Pennies for Pay program\n")
-total = 0
-days = int(input("How many days have you worked?: "))
-print ("\nHere is your salary by day, in pennies:\n")
-print ("Day:\t\t# of pennies")
-print ("Day 1\t\t 1")
-for i in range(1,days):
-    salary = 2**i
-    print ("Day", i+1,"\t\t",salary)
-    total += salary
-print ("Your total pay was", total, "pennies.")
-'''
-
-input("Press enter to exit.")
-
+Password challenge
+   Ask the user for a password. It must be at least 6 characters long, and it must contain a '!' or a '$' sign. If they give a valid password display "Valid Password", otherwise display "Invalid Password". Use a while loop to keep asking for the password until the user enters it in the correct format?
+"""
