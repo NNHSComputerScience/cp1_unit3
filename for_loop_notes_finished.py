@@ -97,16 +97,17 @@ for score in scores:
 num_stus = len(students)
 print("\nThere are", num_stus, "students in the class.")
 
-# simple search algorithms
+# simple search algorithm
 for stu in students:
 	if len(stu) > 4:
 		print(f"\n{stu}'s name is greater than 4 letters long.")
-		
-a = 0
+
+# averaging algorithm
+total = 0
 for score in scores:
-	if score >= 90:
-		a += 1
-print("\nNumber of A's on the exam:", a)
+	total += score
+average = total/len(scores)
+print("\nAverage score on the exam:", average)
 
 # The tuple() function - converts any sequence to type tuple.
 nums = tuple(range(1,11))
