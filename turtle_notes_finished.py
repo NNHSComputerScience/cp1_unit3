@@ -26,7 +26,6 @@ print("E:", string[-1]) # -1 always the last element
 NAMES = ("Leonardo", "Raphael", "Michelangelo", "Donatello") # all caps variables (CONSTANTS) never change
 COLORS = ("blue",    "red",     "orange",       "purple")
 
-# CHALLENGE: print "Leonardo is the color blue" using indexing
 print(names[0] + " is the color " + colors[0])
 
 print()
@@ -36,6 +35,8 @@ print()
 for index in range(len(names)):
     print(names[index] + " is the color " + colors[index])
 
+# !!! INSTRUCTOR NOTE: Peer instruction #4.1 & 4.2
+    
 # Object Oriented Programming (OOP) refresher 
 #   OBJECT - a software model that bundles data and behavior together; useful for modeling real-world objects, like turtles!
 #   METHOD - behaviors, or actions, of a software object (a turtle can move forward, turn right, or change its color)
