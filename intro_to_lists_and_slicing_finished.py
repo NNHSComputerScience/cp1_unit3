@@ -1,7 +1,7 @@
-# intro to lists and slicing notes
+# Unit 3 Notes: intro to lists and slicing
 
 # a LIST is an ordered sequence of any type, like tuples, except it is MUTABLE.
-# MUTABLE - once creates, it can be modified.
+# MUTABLE - once created, it can be modified.
 #   e.g. [0, "a", 1.1, "hello", (1,2,3,4,5), True, 1]
 
 # creating an empty list
