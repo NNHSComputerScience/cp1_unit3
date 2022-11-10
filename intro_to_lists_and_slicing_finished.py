@@ -48,9 +48,12 @@ del row1[0]
 print(row1)
 print(len(row1))
 
+# deleting a slice
 print(row2)
 del row2[1:3]
 print(row2)
+
+# !!! Instructor Note: Peer instruction question 5.1
 
 # SLICE - targets one or more elements of a sequence.
 #   To slice, use the format [ starting index value : ending index value (exclusive) : step ]
@@ -87,6 +90,9 @@ print(word[0 : : 2])
 
 # invalid slice returns an empty string
 print("**" + word[5 : 6] + "**")
+
+# !!! Instructor Note: Peer instruction question 5.2
+
 
 print(
 '''
