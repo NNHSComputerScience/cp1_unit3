@@ -79,6 +79,20 @@ print(row)
 row.insert(1, "Harley Davidson")
 print(row)
 
+# Beware of bugs! Be careful looping through a mutable sequence and also modifying it.
+print(row)
+for car in row:
+    print(row.index(car), car)
+	   row.remove(car)
+print(row)  # we missed 4 cars!
+
+print()
+print(row)
+for i in range(len(row)):
+	   print(i, row[0])
+	   row.pop(0)
+print(row) # removed all
+
 # random.choice(sequence) function
 #	Return a random element from a sequence, as long as there are items left in the sequence.
 
